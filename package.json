@@ -1,0 +1,40 @@
+{
+	"name": "drone-sign",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"generate-prisma-prod": "DATABASE_URL=\"postgresql://droneuser:droneUser%4096639763%40@localhost:5432/dronedb?schema=public\" prisma generate",
+		"db-push-prisma-prod": "DATABASE_URL=\"postgresql://droneuser:droneUser%4096639763%40@localhost:5432/dronedb?schema=public\" prisma db push",
+		"migrate-prisma-prod": "DATABASE_URL=\"postgresql://droneuser:droneUser%4096639763%40@localhost:5432/dronedb?schema=public\" prisma migrate dev --name init"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-node": "^5.2.11",
+		"@sveltejs/enhanced-img": "^0.4.4",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@types/bcrypt": "^5.0.2",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.49",
+		"prisma": "^6.1.0",
+		"svelte": "^5.0.0",
+		"tailwindcss": "^3.4.17",
+		"vite": "^5.4.11"
+	},
+	"dependencies": {
+		"@auth/core": "^0.37.4",
+		"@auth/sveltekit": "^1.7.4",
+		"@prisma/client": "^6.1.0",
+		"axios": "^1.7.9",
+		"bcrypt": "^5.1.1",
+		"bcryptjs": "^2.4.3",
+		"docusign-esign": "^8.0.1",
+		"nodemailer": "^6.9.16",
+		"puppeteer": "^24.1.1",
+		"qrcode": "^1.5.4"
+	}
+}

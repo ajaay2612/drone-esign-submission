@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+svg{
+  width:100%;
+  height:100%;
+}
+
+
+@layer utilities{
+    body{
+        @apply font-inter;
+    }
+
+    .mainContainer{
+        @apply w-[89%] mx-auto lg:w-[90%];
+    }
+
+    .dashContainer{
+        @apply lg:mx-auto lg:w-[72%];
+    }
+
+    /* responsive */
+
+    .MqSmall{
+        font-size: min(max(0rem, 3.5vw),1rem);
+    }
+    .MqMedium{
+        font-size: min(max(0rem, 4vw),1rem);
+    }
+    .MqLarge{
+        font-size: min(max(0.5rem, 2vw),1rem);
+    }
+    .MqXLarge{
+        font-size: min(max(0.7rem, 0.85vw),1.85rem);
+    }
+    .MqXXLarge{
+        font-size: min(max(0.7rem, 0.8vw),1.2rem);
+    }
+
+    .sectionController{
+        @apply MqSmall md:MqMedium lg:MqLarge xl:MqXLarge 2xl:MqXXLarge;
+    }
+
+    .displayNone{
+        @apply opacity-0 pointer-events-none;
+    }
+
+    html{
+        @apply text-[5vw] xsm:text-[3.15vw] md:text-[1.98vw] lg:text-[1.15vw] xl:text-[0.99vw] 2xl:text-[0.905vw];
+    }
+
+
+    .gradButton {
+        background: linear-gradient(90deg, #00D980 0%, #007344 50%, #00D980 100%);
+        background-size: 200% auto;
+        transition: background-position 0.5s cubic-bezier(.17,.84,.44,1) , box-shadow 0.5s cubic-bezier(.17,.84,.44,1), transform 0.5s cubic-bezier(.17,.84,.44,1);
+        @apply font-medium
+    }
+    
+    .gradButton:hover {
+        @apply shadow-md scale-[1.02];
+        background-position: 80% center;
+    }
+
+    .qrCode{
+        transition: opacity 0.5s cubic-bezier(.17,.84,.44,1) ,box-shadow 0.5s cubic-bezier(.17,.84,.44,1), transform 0.5s cubic-bezier(.17,.84,.44,1);
+
+    }
+    .QRbutton{
+        transition: background-position 0.5s cubic-bezier(.17,.84,.44,1) , box-shadow 0.5s cubic-bezier(.17,.84,.44,1), transform 0.5s cubic-bezier(.17,.84,.44,1);
+    }
+
+    .buttonHover{
+        @apply ring-4 ring-transparent hover:ring-[#00b067b5] ring-offset-2 ring-offset-transparent hover:ring-offset-[#FAFFFD] transition-[box-shadow]
+    }
+
+    .authButton{
+        background: linear-gradient(90deg, #00D980 0%, #007344 100%);
+        @apply w-full py-[0.8em] text-white rounded-[0.5em] font-medium text-[1.2em] ring-4 ring-transparent hover:ring-[#00b067b5] ring-offset-2 transition-[box-shadow];
+    }
+
+    .inputFields{
+        @apply text-[1.2em] block w-full  border-b-2 placeholder:text-[#707070] border-[#707070] py-[0.5em] focus-within:border-[#00b068] focus-within:outline-none;
+    }
+    
+    .droneRegInputFieldsContainer{
+        @apply w-full md:w-[calc((100%-1.6em)/2)] lg:w-[calc((100%-3.5em)/2)];
+    }
+    .droneRegInputFieldsContainer > label{
+        @apply mb-[0.7em] font-plus-jakara text-[1.1em] block font-medium text-[#000000];
+    }
+
+    .droneRegInputFields{
+        @apply rounded-[0.55em] px-[0.7em] placeholder:text-[#707070] text-[1.1em] block w-full  border border-[#DBDBDB] py-[0.5em] focus-within:border-[#00b068] focus-within:outline-none
+    }
+    
+    .hiddenSection{
+        @apply opacity-0 pointer-events-none relative;
+    }
+
+    .inactiveTab{
+        @apply bg-[#DBDBDB] ;
+    }
+
+    .currentTab{
+        @apply bg-[#00D980] ;
+    }
+    
+    .finishedTab{
+        @apply bg-[#00D980] ;
+    }
+    .inactiveTab .line{
+        @apply bg-[#DBDBDB] ;
+    }
+
+    .currentTab .line{
+        @apply bg-[#00D980] ;
+    }
+
+    .finishedTab .line{
+        @apply bg-[#00D980] ;
+    }
+
+    .activeRgType{
+        @apply border-[#00D980] bg-[#FAFFFD] text-[#009E5F]
+    }
+    .activeRgType .rgDot{
+        @apply border-[#00D980]
+    }
+
+    .width-full{
+        @apply w-full;
+    }
+
+    .drRegContainer{
+        @apply lg:w-[40%] mx-auto
+    }
+
+    .greenHighlight{
+        @apply bg-[#D4F9EA] text-[#009E5F] text-center rounded-full w-fit px-[1.4em] lg:px-[2em] text-[0.8em] lg:text-[0.9em];
+    }
+
+    .redHighlight{
+        @apply bg-[#EFD4D4] text-[#BA4848] text-center rounded-full w-fit px-[1.4em] lg:px-[2em] text-[0.8em] lg:text-[0.9em];
+    }
+
+    .yellowHighlight{
+        @apply bg-[#F4EDE0] text-[#BA9348] text-center rounded-full w-fit px-[1.4em] lg:px-[2em] text-[0.8em] lg:text-[0.9em];
+    }
+
+    .redHighlightOnlyColor{
+        @apply bg-[#EFD4D4] text-[#BA4848];
+    }
+}
+
+
+

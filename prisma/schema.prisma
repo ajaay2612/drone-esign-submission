@@ -1,0 +1,112 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                    String    @id @default(cuid())
+  email                 String    @unique
+  image                 String?
+  password              String
+  name                  String?
+  firstName             String?
+  lastName              String?
+  dateOfBirth           DateTime?
+  phoneNumber           String?
+  countryCode           String?
+  streetAddress         String?
+  city                  String?
+  state                 String?
+  stateCode            String?
+  notifications          Json?
+  zipCode               String?
+  createdAt             DateTime  @default(now())
+  Account               Account[]
+  previouslyOwnedDrones PreviousOwnership[]
+  Drone                 Drone[]  
+  futureOwnerOf         Drone[]   @relation("FutureOwner")
+  resetPasswordToken    String?   @unique
+  resetPasswordExpires  DateTime?
+  isSuperUser           Boolean   @default(false) 
+}
+
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model PreviousOwnership {
+  id        String   @id @default(cuid())
+  userId    String
+  droneId   String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  drone     Drone    @relation(fields: [droneId], references: [id], onDelete: Cascade)
+  ownedAt   DateTime @default(now())
+}
+
+model Drone {
+  id              String    @id @default(cuid())
+  registrationId  String    @unique  
+  droneId         String?    
+  nickname        String
+  modelNumber     String
+  serialNumber    String
+  images          Json  // URLs of the images
+  manufacturer    String
+  registrationType String
+  active           Boolean   @default(true) 
+  userId          String
+  futureOwnerId   String?   // New optional field
+  previousOwners  PreviousOwnership[]
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  futureOwner     User?     @relation("FutureOwner", fields: [futureOwnerId], references: [id], onDelete: Cascade)
+  Agreement       Agreement[]
+  createdAt       DateTime  @default(now())
+  signatureStatus String?   @default("pending")
+}
+
+model Agreement {
+  id              String    @id @default(cuid())
+  droneId         String
+  clickWrapData   Json?
+  docusignEnvelopeId String
+  agreementType   String
+  createdAt       DateTime  @default(now())
+
+  drone           Drone     @relation(fields: [droneId], references: [id], onDelete: Cascade)
+}
+
+model OAuthState {
+    id           String   @id @default(cuid())
+    state        String   
+    codeVerifier String
+    userId       String
+    expiresAt    DateTime
+
+    @@index([userId])
+}
