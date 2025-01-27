@@ -24,7 +24,7 @@ cd drone-esign-submission
 npm install
 ```
 
-3. Create and configure environment variables:
+3. Create and configure environment variables (Follow Environment Configuration below)
 
 4. Set up the database:
 ```bash
