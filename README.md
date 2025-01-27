@@ -15,8 +15,8 @@ This application helps drone owners manage their registrations, transfer ownersh
 
 1. Clone the repository:
 ```bash
-git clone ajaay2612/drone-esign-submission
-cd drone-esign-app
+git clone https://github.com/ajaay2612/drone-esign-submission.git
+cd drone-esign-submission
 ```
 
 2. Install dependencies:
@@ -109,6 +109,13 @@ DOCUSIGN_PRIVATE_KEY_PATH="./private.key"
    - Configure OAuth and generate integration keys
    - Create clickwrap agreements and workflows
    - Generate RSA key pair and save private key
+   - Configure DocuSign Connect to point to `[YOUR_DOMAIN]/webhook`
+     - This endpoint receives DocuSign status updates
+    
+7. **Admin Setup**
+   - After creating your first user, access the database
+   - Update the user's `isSuperUser` field to `true`.
+   - This grants administrative privileges required for app management
 
 ## Production Deployment
 
