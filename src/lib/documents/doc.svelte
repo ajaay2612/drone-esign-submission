@@ -127,7 +127,7 @@
     
             <div class="reg-fields">
                 <h2><span  style="padding-right:5px;">3.</span> Operational Limitations and Conditions</h2>
-                <p>The drone shall not operate in Drone Management Authority-designated no-fly zones and shall not exceed a maximum altitude of 400 feet unless specifically authorized by the FAA. The drone must only be operated during daylight hours or twilight with appropriate anti-collision lighting, within visual line of sight of the operator, and in full compliance with local, state, and federal regulations. Failure to adhere to these conditions may result in the suspension or revocation of the registration.</p>
+                <p>The drone shall not operate in Drone Management Authority-designated no-fly zones and shall not exceed a maximum altitude of 400 feet unless specifically authorized by the Drone management authority. The drone must only be operated during daylight hours or twilight with appropriate anti-collision lighting, within visual line of sight of the operator, and in full compliance with local, state, and federal regulations. Failure to adhere to these conditions may result in the suspension or revocation of the registration.</p>
             </div>
     
         </div>
@@ -156,7 +156,7 @@
            
             <div class="reg-fields">
                 <h2><span  style="padding-right:5px;">5.</span>  Registrant Obligations</h2>
-                <p>The Registrant is required to operate the drone in a safe and responsible manner, maintain current and valid contact information with the FAA and the company, and promptly report any incidents, crashes, or loss of the drone to the FAA or relevant authorities.</p>
+                <p>The Registrant is required to operate the drone in a safe and responsible manner, maintain current and valid contact information with the Drone management authority and the company, and promptly report any incidents, crashes, or loss of the drone to the Drone management authority or relevant authorities.</p>
             </div>
             
             <div class="reg-fields">
@@ -165,7 +165,7 @@
                     <p>The drone registration is valid for a period of <span><u>3 Years</u></span> from the Date of Issue.
                     </p>
                     <p>
-                        The Registrant is required to operate the drone in a safe and responsible manner, maintain current and valid contact information with the FAA and the company, and promptly report any incidents, crashes, or loss of the drone to the FAA or relevant authorities.
+                        The Registrant is required to operate the drone in a safe and responsible manner, maintain current and valid contact information with the Drone management authority and the company, and promptly report any incidents, crashes, or loss of the drone to the Drone management authority or relevant authorities.
                     </p>
                 </div>
             </div>

@@ -185,7 +185,7 @@
                 <h2><span  style="padding-right:5px;">4.</span> Operational Limitations and Conditions</h2>
                 <p>The Original Owner is responsible for transferring all rights, responsibilities, and complete ownership of the specified drone to the New Owner. This includes providing comprehensive documentation and full access to existing registration information. The Original Owner must confirm that the drone is free from any outstanding legal or financial encumbrances that might impact the transfer.</p>
 
-                <p>The New Owner accepts full responsibility for the drone's operation and must ensure complete compliance with all Federal Aviation Administration regulations. They are required to update all registration information within 14 days of the transfer and maintain all existing operational requirements and safety standards previously established.</p>
+                <p>The New Owner accepts full responsibility for the drone's operation and must ensure complete compliance with all Drone management authority regulations. They are required to update all registration information within 14 days of the transfer and maintain all existing operational requirements and safety standards previously established.</p>
 
                 <p>Dronova, as the Administrator, will facilitate the ownership transfer process, update official registration records, and verify the identity and eligibility of both parties to ensure a legally sound and transparent transaction.</p>
             </div>
