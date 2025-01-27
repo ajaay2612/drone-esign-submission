@@ -1,8 +1,6 @@
 # DroNova
 
-Drones have revolutionized various industries, from photography to delivery services. However, the rapid increase in drone usage has also brought challenges, especially in terms of registration, ownership tracking, and airspace safety. The need for a secure and efficient way to manage drones is urgent, and that's where technology can make a real difference. We realized that by using DocuSign’s technologies, we could help make drone registration and ownership management smoother, more accessible, and entirely online. This project started as a way to fix a real-world issue using technology, and that’s what drives us.
-
-This application helps drone owners manage their registrations, transfer ownership, and handle all required documentation digitally.
+The idea behind this project came from seeing the real challenge that the FAA faces with managing over a million drones in the U.S. By 2024, drone registration and identification have become critical for airspace safety, ownership transfers, and tracking incidents. It’s a huge task, and that’s what inspired us. We knew there had to be a way to make the process easier, faster, and more efficient. So, we decided to build a solution that would be simple, secure, and entirely online. With technology, we could streamline the process for drone owners and make it easier for the FAA to keep track of everything. It’s not just about creating something new; it’s about solving a real-world problem with a human-centered approach. Our goal was to make sure everyone could get their drones registered and managed with ease, without any unnecessary steps or complicated paperwork.
 
 ## Prerequisites
 
