@@ -1,6 +1,8 @@
-# Drone E-Sign Application
+# DroNova
 
-A SvelteKit-based drone registration and e-signature management system that integrates with DocuSign for document signing and verification. This application helps drone owners manage their registrations, transfer ownership, and handle all required documentation digitally.
+Drones have revolutionized various industries, from photography to delivery services. However, the rapid increase in drone usage has also brought challenges, especially in terms of registration, ownership tracking, and airspace safety. The need for a secure and efficient way to manage drones is urgent, and that's where technology can make a real difference. We realized that by using DocuSign’s technologies, we could help make drone registration and ownership management smoother, more accessible, and entirely online. This project started as a way to fix a real-world issue using technology, and that’s what drives us.
+
+This application helps drone owners manage their registrations, transfer ownership, and handle all required documentation digitally.
 
 ## Prerequisites
 
